@@ -54,7 +54,7 @@ class ApplicationController < ActionController::Base
   # Sets the user domain variable
   def set_user_domain
     if Rails.env.test? || !Rails.configuration.loadbalanced_configuration
-      @user_domain = "greenlight"
+      @user_domain = "pat3"
     else
       @user_domain = parse_user_domain(request.host)
 

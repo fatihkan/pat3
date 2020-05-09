@@ -1,19 +1,3 @@
-# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
-#
-# Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
-#
-# This program is free software; you can redistribute it and/or modify it under the
-# terms of the GNU Lesser General Public License as published by the Free Software
-# Foundation; either version 3.0 of the License, or (at your option) any later
-# version.
-#
-# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
-#
-# You should have received a copy of the GNU Lesser General Public License along
-# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
-
 # Locale.
 
 en:
@@ -34,9 +18,9 @@ en:
       authentication:
         disabled: Disabled
         enabled: Enabled
-        info: Only allow authenticated users to join a room
-        title: Require Authentication for Rooms
-        user-info: You must sign in to Greenlight to join this room
+        info: Only allow authenticated users to join a game room
+        title: Require Authentication for Game Rooms
+        user-info: You must sign in to Pat3 to join this game room
       branding:
         change: Change Image
         info: Change the branding image that appears in the top left corner
@@ -69,7 +53,7 @@ en:
       recording_visibility:
         info: Set the default recording visbility for new recordings
         title: Recording Default Visibility
-        warning: This setting will only be applied to rooms that aren't running
+        warning: This setting will only be applied to game rooms that aren't running
       registration:
         info: Change the way that users register to the website
         title: Registration Method
@@ -78,12 +62,12 @@ en:
           invite: Join by Invitation
           open: Open Registration
       rooms:
-        info: Limits the number of rooms that a user can have (including Home Room). This setting does not apply to administrators.
-        title: Number of Rooms per User
+        info: Limits the number of game rooms that a user can have (including Main Game Room). This setting does not apply to administrators.
+        title: Number of game rooms per User
       shared_access:
-        info: Setting to disabled will remove the button from the Room options dropdown, preventing users from sharing rooms
-        title: Allow Users to Share Rooms
-      subtitle: Customize Greenlight
+        info: Setting to disabled will remove the button from the Game Room options dropdown, preventing users from sharing game rooms
+        title: Allow Users to Share Game Rooms
+      subtitle: Customize Pat3
       title: Site Settings
     flash:
       approved: User has been successfully approved.
@@ -94,7 +78,7 @@ en:
       demoted: User has been successfully demoted
       invite: Invite successfully sent to %{email}
       invite_email_verification: Emails must be enabled in order to use this method. Please contact your system administrator.
-      merge_fail: There was an issue merging the user accounts. Please check the users selected and try again 
+      merge_fail: There was an issue merging the user accounts. Please check the users selected and try again
       merge_success: User accounts merged successfully
       perm_deleted: User has been permanently deleted
       promoted: User has been successfully promoted
@@ -107,13 +91,13 @@ en:
       title: Server Recordings
       no_recordings: This server has no recordings.
     roles:
-      appear_in_share_list: Include users with this role in the dropdown for sharing rooms
-      can_create_rooms: Can create rooms
+      appear_in_share_list: Include users with this role in the dropdown for sharing game rooms
+      can_create_rooms: Can create game rooms
       delete: Delete the role
       invalid_create: There was a problem creating a new role. Please check the role values and try again
       invalid_order: There was a problem updating the priority of the role. Please check the values and try again
       invalid_update: There was a problem updating the permissions of the role. Please check the values and try again
-      manage_rooms_recordings: Allow users with this role to manage server rooms and recordings
+      manage_rooms_recordings: Allow users with this role to manage server game rooms and recordings
       name: Role Name
       new_role: Create a new role
       role_has_users: This role is assigned to %{user_count} accounts. Please remove all accounts from this role before deleting it.
@@ -123,7 +107,7 @@ en:
       edit_site_settings: Allow users with this role to edit site settings
       edit_roles: Allow users with this role to edit other roles
       manage_users: Allow users with this role to manage users
-      invalid_assignment: There was a problem assigning the roles to the user. Please check the values and try again 
+      invalid_assignment: There was a problem assigning the roles to the user. Please check the values and try again
       colour:
         title: Role Colour
         info: Set the colour that will be associated with the role
@@ -161,8 +145,8 @@ en:
         username: Username
       title: Manage Users
   add_to_google_calendar: "Add to Google Calendar"
-  bigbluebutton: BigBlueButton
-  bigbluebutton_exception: Oops, there was an error when starting the meeting!
+  bigbluebutton: Pat3
+  pat3_exception: Oops, there was an error when starting the game!
   cancel: Cancel
   cookies:
     cookie_info: Cookies help us deliver our services. By using our services, you agree to our use of cookies.
@@ -170,7 +154,22 @@ en:
   copied: Copied
   copy: Copy
   date:
-    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    month_names:
+      [
+        ~,
+        January,
+        February,
+        March,
+        April,
+        May,
+        June,
+        July,
+        August,
+        September,
+        October,
+        November,
+        December,
+      ]
   default_admin: You are still using the default password for this account. Please click <a href="%{edit_link}">here</a> to change it
   delete: Delete
   delivery_error: An error occured during email delivery. Please contact an administrator!
@@ -179,9 +178,9 @@ en:
   email_sent: Your %{email_type} email has been sent! (Please check your Spam folder if you haven't received it)
   enter_your_name: Enter your name!
   errors:
-    bigbluebutton:
+    pat3:
       help: Please make sure the proper steps have been taken. <a href="%{doc_link}">Learn more</a>
-      message: Invalid BigBlueButton Endpoint and Secret
+      message: Invalid Pat3 Endpoint and Secret
       title: Server Error
     internal:
       message: Looks like something went wrong on our end.
@@ -194,10 +193,10 @@ en:
       contact_admin: If you are not an administrator, please contact one.
       continue: I'd like to stay using 1.0.
       notice: >
-        Greenlight encountered a database migration error.<br>
-        This may be because you haven't updated to Greenlight 2.0.
+        Pat3 encountered a database migration error.<br>
+        This may be because you haven't updated to Pat3 2.0.
       upgrade: Show me how to upgrade to 2.0!
-      version: We've released a new version of Greenlight, but your database isn't compatible.
+      version: We've released a new version of Pat3, but your database isn't compatible.
     messages:
       blank: can't be blank
       too_short: is too short
@@ -208,7 +207,7 @@ en:
       inclusion: is not included in the list
     no_provider:
       message: The site you are trying to access is not enabled
-      help: Please contact your system administrator to setup Greenlight
+      help: Please contact your system administrator to setup Pat3
     not_found:
       message: Sorry! The page you are looking for does not exist.
       help: Is it possible its been removed?
@@ -225,7 +224,7 @@ en:
   expired_reset_token: Password reset link has expired!
   features:
     title: Features
-    rooms: Personalized Rooms
+    rooms: Personalized Game Rooms
     recordings: Recording Management
     designs: Custom Designs
     authentication: User Authentication
@@ -236,7 +235,7 @@ en:
     email: Email
     submit: Submit
   go_back: Go back
-  greenlight: Greenlight
+  greenlight: Pat3
   header:
     all_recordings: All Recordings
     dropdown:
@@ -245,26 +244,26 @@ en:
       home: Home
       settings: Profile
       signout: Sign out
-  home_room: Home Room
+  home_room: Main Game Room
   info_update_success: Information successfully updated.
   invalid_credentials: The email and password you entered did not match our records. Try again or click Forgot Password to reset your password.
   invalid_login_method: Login failed due to account mismatch. You need to log in with omniauth.
-  invite_message: "To invite someone to the meeting, send them this link:"
+  invite_message: "To invite someone to the game, send them this link:"
   javascript:
     room:
       mailer:
-        subject: 'has invited you to view a recording.'
-        body: 'To view the recording, follow the link below:'
-        autogenerated: 'This e-mail is auto-generated by BigBlueButton.'
-        footer: 'BigBlueButton is an open source web conferencing system. For more information on BigBlueButton, see https://bigbluebutton.org/.'
+        subject: "has invited you to view a recording."
+        body: "To view the recording, follow the link below:"
+        autogenerated: "This e-mail is auto-generated by Pat3."
+        footer: "Pat3 First Video Talk Game Platform for Game Lovers "
     search:
       start: Start searching...
   landing:
-    about: "%{href} is a simple front-end for your BigBlueButton open-source web conferencing server. You can create your own rooms to host sessions, or join others using a short and convenient link."
-    welcome: Welcome to BigBlueButton.
-    video: Watch our tutorial on using Greenlight
+    about: "%{href} First Video Talk Game Platform for Game Lovers"
+    welcome: Welcome to Pat3.
+    video: Watch our tutorial on using Pat3
     upgrade: Show me how to upgrade to 2.0!
-    version: We've released a new version of Greenlight, but your database isn't compatible.
+    version: We've released a new version of Pat3, but your database isn't compatible.
   language_default: Default (browser language)
   ldap_error: Unable to connect to the LDAP server. Please check your LDAP configuration in the env file and ensure your server is running.
   login: Sign in
@@ -273,13 +272,13 @@ en:
     user:
       approve:
         info: Your account has been approved.
-        signin: To access your personal rooms, click the button below and sign in.
+        signin: To access your personal game rooms, click the button below and sign in.
         signin_link: Sign In
         signup:
-          info: A new user has signed up to use Greenlight.
-          more-info: To allow this user to access Greenlight you must approve their account in organization settings.
+          info: A new user has signed up to use Pat3.
+          more-info: To allow this user to access Pat3 you must approve their account in organization settings.
           admins_link: Visit the Organization Page
-          subject: New Greenlight User Sign Up
+          subject: New Pat3 User Sign Up
           username: The user signed up with the name %{name} and the email %{email}.
         subject: Account Approved
         username: Your username is %{email}.
@@ -293,16 +292,16 @@ en:
         signup_info: To signup using your email, click the button below and follow the steps.
         signup_link: Sign Up
         signup:
-          info: A user that was invited has signed up to use Greenlight.
+          info: A user that was invited has signed up to use Pat3.
           admins_link: Visit the Organization Page
-          subject: New Greenlight User Sign Up
+          subject: New Pat3 User Sign Up
           username: The user signed up with the name %{name} and the email %{email}.
-        subject: Invitation to join BigBlueButton
+        subject: Invitation to join Pat3
         username: Your username is %{email}.
       password_reset:
-        title: 'Password reset'
+        title: "Password reset"
         welcome: A password reset has been requested for the email <b>%{email}</b>
-        message: 'If you requested this reset, then please click the link below to reset your password:'
+        message: "If you requested this reset, then please click the link below to reset your password:"
         reset_link: Reset Password
         expire: This link will expire in two hours.
         ignore: You can safely ignore this email if you did not make this request.
@@ -313,10 +312,10 @@ en:
         subtitle: "%{role} Rights Granted"
       verify_email:
         welcome: Welcome to your personal space, %{name}!
-        success: Leveraging %{bigbluebutton}, you can create your own rooms to host sessions and collaborate with others.
+        success: Leveraging %{bigbluebutton}, you can create your own game rooms to host sessions and collaborate with others.
         username: Your username is %{email}.
         verify: To verify your account, just click the button below.
-        verify_text: 'To verify your account, just follow this link: %{url}'
+        verify_text: "To verify your account, just follow this link: %{url}"
         verify_link: Verify Account
         thanks: Thanks for joining and have a great day!
   maintenance:
@@ -332,13 +331,13 @@ en:
       title: Create New Role
     create_room:
       access_code: Access Code
-      access_code_placeholder: Generate an optional room access code
-      auto_join: Automatically join me into the room
-      create: Create Room
-      free_delete: You will be free to delete this room at any time.
-      name_placeholder: Enter a room name...
-      not_blank: Room name cannot be blank.
-      title: Create New Room
+      access_code_placeholder: Generate an optional game room access code
+      auto_join: Automatically join me into the game room
+      create: Create Game Room
+      free_delete: You will be free to delete this game room at any time.
+      name_placeholder: Enter a game room name...
+      not_blank: Game room name cannot be blank.
+      title: Create New Game Room
     delete_account:
       confirm: Are you sure you want to delete this account?
       delete: I'm sure, delete this account.
@@ -347,9 +346,9 @@ en:
       warning: This decision is final. You will <b>not</b> be able to recover associated data.
     delete_room:
       confirm: Are you sure you want to delete %{room}?
-      delete: I'm sure, delete this room.
+      delete: I'm sure, delete this game room.
       keep: On second thought, I'll keep it.
-      warning: You will <b>not</b> be able to recover this room
+      warning: You will <b>not</b> be able to recover this game room
       recording_warning: or any of its %{recordings_num} associated recordings.
     invite_user:
       email_placeholder: Enter the users' emails (seperated by commas)
@@ -362,24 +361,24 @@ en:
       forgot_password: Forgot Password?
     rename_recording:
     remove_shared:
-      title: Are you sure you want to remove this room from your room list?
-      delete: I'm sure, remove this room.
-      warning: You will <b>not</b> be able to access this room anymore.
+      title: Are you sure you want to remove this game room from your game room list?
+      delete: I'm sure, remove this game room.
+      warning: You will <b>not</b> be able to access this game room anymore.
     room_settings:
-      title: Room Settings
-      update: Update Room
+      title: Game Room Settings
+      update: Update Game Room
       client: Select client type
       join_moderator: All users join as moderators
       mute: Mute users when they join
       require_approval: Require moderator approval before joining
-      start: Allow any user to start this meeting
-      footer_text: Adjustment to your room can be done at anytime.
+      start: Allow any user to start this game
+      footer_text: Adjustment to your game room can be done at anytime.
     rename_room:
-      name_placeholder: Enter a new room name...
+      name_placeholder: Enter a new game room name...
     share_access:
-      footer: Sharing a room with a user allows them to start the room and view the room's recordings
+      footer: Sharing a room with a user allows them to start the game room and view the game room's recordings
       list: Shared With
-      title: Share Room Access
+      title: Share Game Room Access
       save: Save Changes
       cancel_changes: Cancel Changes
       select: Select User
@@ -389,8 +388,8 @@ en:
       title: Merge User Accounts
       to: Primary Account
       save: Merge
-      footer: The rooms of the account to be merged will be transfered over to the Primary Account's room list and then the account will be deleted.
-  name_update_success: Room name successfully changed!
+      footer: The game rooms of the account to be merged will be transfered over to the Primary Account's game room list and then the account will be deleted.
+  name_update_success: Game room name successfully changed!
   no_user_email_exists: There is no existing user with the email specified. Please make sure you typed it correctly.
   omniauth_error: An error occured while authenticating with omniauth. Please try again or contact an administrator!
   omniauth_specific_error: "%{error} occured while authenticating with omniauth. Please try again or contact an administrator!"
@@ -416,7 +415,7 @@ en:
     all_recordings: All Recordings
     email: Email Recording
     error: There was an error retrieving %{count} recording(s)
-    no_recordings: This room has no %{inject}recordings.
+    no_recordings: This game room has no %{inject}recordings.
     no_user_recordings: You currently have no recordings.
     no_matched_recordings: No %{inject} recordings match your search.
     recorded_on: Recorded on %{date}
@@ -441,9 +440,9 @@ en:
       fail: Your account has not been approved yet. If multiples days have passed since you signed up, please contact your administrator.
       signup: Your account was successfully created. It has been sent to an administrator for approval.
     banned:
-      fail: You do not have access to this application. If you believe this is a mistake, please contact your administrator. 
+      fail: You do not have access to this application. If you believe this is a mistake, please contact your administrator.
     deprecated:
-      new_signin: Select a new login method for you account. All your rooms from your old account will be migrated to the new account
+      new_signin: Select a new login method for you account. All your game rooms from your old account will be migrated to the new account
       twitter_signin: Signing in via Twitter has been deprecated and will be removed in the next release. Click <a href="%{link}"> here </a> to move your account to a new authentication method
       twitter_signup: Sign up via Twitter has been deprecated. Please use a different sign up method
       merge_success: Successfully merged your twitter account with your new account. Your old twitter account has been deleted
@@ -466,15 +465,15 @@ en:
     pending: Pending
     user: User
   room:
-    access_code_required: Please enter a valid access code to join the room
-    create_room: Create a Room
-    create_room_error: There was an error creating the room
-    create_room_success: Room created successfully
+    access_code_required: Please enter a valid access code to join the game room
+    create_room: Create a Game Room
+    create_room_error: There was an error creating the game room
+    create_room_success: Game room created successfully
     delete:
-      home_room: Can't delete user's Home Room
-      success: Room deleted successfully
-      fail: Failed to delete room (%{error})
-    enter_the_access_code: Enter the room's access code
+      home_room: Can't delete user's Main Game Room
+      success: Game room deleted successfully
+      fail: Failed to delete game room (%{error})
+    enter_the_access_code: Enter the game room's access code
     invalid_provider: You have entered an invalid url. Please check the url and try again.
     invited: You have been invited to join
     invite_participants: Invite Participants
@@ -482,35 +481,35 @@ en:
     last_session: Last session on %{session}
     login: Enter
     owner: Owner
-    owner_banned: This room is currently unavailable
+    owner_banned: This game room is currently unavailable
     no_room:
-      description: Enter the room url or the room id for the room you want to join.
+      description: Enter the game room url or the game room id for the game room you want to join.
       edit_profile: Edit User Profile
-      go_to: Go to the Room
-      invalid_room_uid: The room url/uid you entered was invalid.
-      placeholder: Room url/uid
-      no_recent_rooms: You don't have any recently joined rooms
-      recent_rooms: Go To a Recently Joined Room
-      title: Join a Room
-    no_sessions: This room has no sessions, yet!
-    recordings: Room Recordings
-    room_limit: You have reached the maximum number of rooms allowed
-    room_limit_exceeded: You have exceeded the number of rooms allowed. Please delete %{difference} room(s) to access this room.
+      go_to: Go to the game room
+      invalid_room_uid: The game room url/uid you entered was invalid.
+      placeholder: Game room url/uid
+      no_recent_rooms: You don't have any recently joined game rooms
+      recent_rooms: Go To a Recently Joined Game Room
+      title: Join a Game Room
+    no_sessions: This game room has no sessions, yet!
+    recordings: Game Room Recordings
+    room_limit: You have reached the maximum number of game rooms allowed
+    room_limit_exceeded: You have exceeded the number of game rooms allowed. Please delete %{difference} game room(s) to access this game room.
     sessions: Sessions
-    settings: Room Settings
+    settings: Game Room Settings
     share: Manage Access
     shared_by: Shared by %{email}
-    remove_shared_access_success: Successfully removed shared room from your room list
-    remove_shared_access_error: There was an error removing the shared room from your list
-    shared_access_success: Room shared successfully
-    shared_access_error: There was an error sharing the room
+    remove_shared_access_success: Successfully removed shared game room from your game room list
+    remove_shared_access_error: There was an error removing the shared game room from your list
+    shared_access_success: Game room shared successfully
+    shared_access_error: There was an error sharing the game room
     start: Start
-    unavailable: This room is currently unavailable due to the owner's email not being verified.
-    update_settings_error: There was an error updating the room settings
-    update_settings_success: Room settings successfully updated
+    unavailable: This game room is currently unavailable due to the owner's email not being verified.
+    update_settings_error: There was an error updating the game room settings
+    update_settings_success: GAme room settings successfully updated
     wait:
-      message: The meeting hasn't started yet.
-      auto: You will automatically join when the meeting starts.
+      message: The game hasn't started yet.
+      auto: You will automatically join when the game starts.
   settings:
     account:
       fullname: Full name
@@ -523,7 +522,7 @@ en:
       title: Account Info
     delete:
       button: Yes, I would like to delete my account.
-      disclaimer: If you choose to delete your account, it will <b>NOT</b> be recoverable. All information regarding your account, including settings, rooms, and recording will be removed.
+      disclaimer: If you choose to delete your account, it will <b>NOT</b> be recoverable. All information regarding your account, including settings, game rooms, and recording will be removed.
       subtitle: Permanently Delete your Account
       title: Delete Account
     password:

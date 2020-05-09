@@ -1,18 +1,4 @@
-# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
-#
-# Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
-#
-# This program is free software; you can redistribute it and/or modify it under the
-# terms of the GNU Lesser General Public License as published by the Free Software
-# Foundation; either version 3.0 of the License, or (at your option) any later
-# version.
-#
-# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
-#
-# You should have received a copy of the GNU Lesser General Public License along
-# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+
 
 # Locale.
 
@@ -20,28 +6,29 @@ tr:
   activerecord:
     attributes:
       user:
-        accepted_terms: "Şartlar ve koşullar"
+        accepted_terms: "Şartlar ve Koşullar"
         email: E-posta
         name: İsim
         password: Parola
-        password_confirmation: Parola Doğrulama
+        password_confirmation: Parola Onayı
     errors:
       models:
         user:
-          confirmation: Parola eşleşme hatası
+          confirmation: Parola ile eşleşmiyor
   administrator:
     site_settings:
       authentication:
-        disabled: Etkin Değil
+        disabled: Devre dışı
         enabled: Etkin
-        info: Sadece kimliği doğrulanmış kullanıcılar bir sınıfa katılabilir
-        title: Sınıflar için kimlik doğrulaması iste
-        user-info: Bu sınıfa katılmak için oturum açmalısınız
+        info: Yalnızca kimliği doğrulanmış kullanıcıların bir oturuma katılmalarına izin ver
+        title: Oturumlar için Kimlik Doğrulama Gerektir
+        user-info: Bunun için giriş yapmalısınız
       branding:
-        change: Resmi değiştir
-        info: Sol üst köşede görünen resmi kendi markanızın resmi ile değiştirme
-        placeholder: Resimin bulunduğu link ...
+        change: Resmi Değiştir
+        info: Sol üst köşedeki marka logosunu değiştirin
+        placeholder: Resim Url...
         title: Marka Resmi
+        invalid: Geçersiz URL
       cache:
         info: Güncellenmiş bilgiler için yeni bir istekte bulunan depolanmış sağlayıcı önbelleğini temizler
         title: Sağlayıcı Önbelleğini Temizle
@@ -51,171 +38,171 @@ tr:
         title: Geçerli Kimlik Doğrulayıcıyı Temizle
         button: Yetkilendirme
       color:
-        info: Tema Rengi değiştirmek hem Açıklaştır hem de Koyulaştırma. Açıklaştırma ve Koyulaştırma sonra  değiştirilebilir
+        info: "Normal Rengi değiştirmek , hem Açıklaştır hem de Koyulaştırır. Açıklaştır ve Koyulaştır sonra ayrı ayrı değiştirilebilir."
         title: Ana Renk
         regular: Düzenli
-        lighten: Açıklaştırma
-        darken: Koyulaştırma
+        lighten: Rengi aç
+        darken: Koyult
       log_level:
-        title: Günlük Düzeyi
-        information: Tüm dağıtım için Günlük Seviyesini değiştirme
-        debug: Onarma
+        title: Oturum açma düzeyi
+        information: Tüm dağıtım için oturum açma düzeyini değiştir
+        debug: Hata ayıkla
         info: Bilgi
-        warn: Uyarı
+        warn: Uyar
         error: Hata
-        fatal: Büyük Hata
+        fatal: Onulmaz
         unknown: Bilinmeyen
       recording_visibility:
         info: Yeni kayıtlar için varsayılan kayıt görünürlüğünü ayarlama
-        title: Varsayılan Görünürlüğü Kaydetme
-        warning: Bu ayar yalnızca açık olmayan sınıflara uygulanacak
+        title: Varsayılan Görünürlük Kaydı
+        warning: Bu ayar yalnızca çalışmayan oyun odalarına uygulanır
       registration:
-        info: Kullanıcıların web sitesine kayıt olma şeklini değiştirme
+        info: Kullanıcıların web sitesine kayıt olma şeklini değiştirin
         title: Kayıt Yöntemi
         methods:
-          approval: Kabul et / Reddet
-          invite: Daveti kabul et
-          open: Açık Kayıt
+          approval: Onayla/Reddet
+          invite: Davete Katıl
+          open: Kaydı Aç
       rooms:
-        info: Kullanıcının sahip olabileceği sınıf sayısını sınırlar (Ana Sınıf dahil). Bu ayar yöneticiler için geçerli değildir.
-        title: Herbir Kullanıcı için Sınıf Sayısı
+        info: Kullanıcının sahip olabileceği oyun oda sayısını kısıtlar (Ana oyun odası dahil). Bu ayar adminlere uygulanamaz.
+        title: Kullanıcı Başına Oyun Oda Sayısı
       shared_access:
-        info: "Sınıf seçenekleri değiştirme butonunu devre dışı olarak ayarlamak, böylece kullanıcıların yetkisi kısıtlanıp sınıf paylaşmasını önler."
-        title: Kullanıcıların Sınıf  Paylaşmasına İzin Ver
-      subtitle: Sistemi Özelleştir
+        info: "Devre dışı ayarını seçmek oyun oda seçenekleri düğmesini kaldırır, kullanıcıların oyun odalarını paylaşmasını önler"
+        title: Kullanıcıların oyun odalarını paylaşmasına olanak verir
+      subtitle: PAT3'ü Özelleştir
       title: Site Ayarları
     flash:
-      approved: Kullanıcı başarıyla onaylandı.
-      banned: Kullanıcı başarıyla engellendi.
-      unbanned: Kullanıcının engeli başarıyla kaldırıldı.
-      delete: Kullanıcı başarıyla silindi.
-      delete_fail: Kullanıcı silinemedi
-      demoted: Kullanıcının yetkisi başarıyla azaltıldı.
-      invite: "Davet %{email} adresine başarıyla gönderildi "
+      approved: Kullanıcı Başarıyla Onaylandı
+      banned: Kullanıcı Başarıyla Yasaklandı
+      unbanned: Kullanıcının Yasağı Başarıyla Kaldırıldı
+      delete: Kullanıcı Başarıyla Silindi
+      delete_fail: Kullanıcı Silinemedi
+      demoted: Kullanıcı başarıyla indirgendi
+      invite: "Davet başarıyla gönderildi %{email}"
       invite_email_verification: Bu yöntemi kullanabilmek için e-postaların etkinleştirilmesi gerekir. Lütfen sistem yöneticinize başvurun.
-      merge_fail: Kullanıcı hesapları birleştirilirken bir sorun oluştu. Lütfen seçilen kullanıcıları kontrol edip tekrar deneyin 
-      merge_success: Kullanıcı hesapları başarıyla birleştirildi
+      merge_fail: Kullanılıcıları birleştirirken bir hata oluştu. Lütfen seçili kullanıcıları kontrol edin ve yeniden deneyin. 
+      merge_success: Kullanıcılar başarılı şekilde birleştirildi
       perm_deleted: Kullanıcı kalıcı olarak silindi
-      promoted: Kullanıcı başarıyla tanıtıldı
+      promoted: Kullanıcı başarıyla terfi etti
       registration_method_updated: Kayıt yöntemi başarıyla güncellendi
-      reset_password: Kullanıcıya parolasını sıfırlaması için bir e-posta gönderildi. (Lütfen almadılarsa spam klasörlerini kontrol etmelerini isteyin)
+      reset_password: Kullanıcıya şifresini değiştirmesi için e-posta gönderildi. (Eğer e-posta alınmadıysa lütfen spam kutusunu kontrol etmelerini isteyiniz)
       restored: Kullanıcı başarıyla geri yüklendi
-      settings: Site Ayarları başarıyla değiştirildi
+      settings: Site ayarları başarıyla değiştirildi
       unauthorized: Bu kullanıcı üzerinde işlem yapma yetkiniz yok
     recordings:
       title: Sunucu Kayıtları
-      no_recordings: Bu Sunucuda kayıt yok
+      no_recordings: Bu sunucuda kayıt yok
     roles:
-      appear_in_share_list: Sınıf paylaşma açılır listesine bu yetkiye sahip kullanıcıları dahil et
-      can_create_rooms: Sınıflar oluşturabilir
-      delete: Yetkiyi Sil
-      invalid_create: Yeni bir yetki oluşturulurken bir sorun oluştu. Lütfen yetki değerlerini kontrol edip tekrar deneyin
-      invalid_order: Yetkinin önceliği güncellenirken bir sorun oluştu. Lütfen değerleri kontrol edip tekrar deneyin
-      invalid_update: Yetkinin izinleri güncellenirken bir sorun oluştu. Lütfen değerleri kontrol edip tekrar deneyin
-      manage_rooms_recordings: Bu yetkiye sahip kullanıcıların sanal sınıfları ve kayıtları yönetmesine izin ver
-      name: Yetki İsmi
-      new_role: Yeni yetki grubu oluştur
-      role_has_users: "Bu yetki %{user_count} hesabına atandı. Lütfen silmeden önce bu yetkideki tüm hesapları kaldırın."
-      title: Yetki Grupları
-      promote_email: Bu yetkiye atandıklarında kullanıcılara bir e-posta gönderin
-      demote_email: Bu yetkiden çıkarıldıklarında kullanıcılara bir e-posta gönderin
-      edit_site_settings: Bu yetkiye sahip kullanıcıların site ayarlarını düzenlemesine izin ver
-      edit_roles: Bu yetkiye sahip kullanıcıların diğer yetkileri düzenlemesine izin ver
-      manage_users: Bu yetkiye sahip kullanıcıların kullanıcıları yönetmesine izin ver
-      invalid_assignment: Kullanıcıya yetkiler atanırken bir sorun oluştu. Lütfen değerleri kontrol edip tekrar deneyin 
+      appear_in_share_list: Kullanıcıları oyun odaları paylaşmaları için  bu rolle açılır listeye ekleyin
+      can_create_rooms: Oyun odaları oluşturulabilir
+      delete: Rolü sil
+      invalid_create: Rol oluşturulurken hata oldu. Lütfen rol değerlerini yeniden kontrol ediniz.
+      invalid_order: Rol önceliğini güncellerken hata oluştu. Lütfen değerleri kontrol edip yeniden deneyiniz.
+      invalid_update: Role atanmış izinlerin güncellenmesinde bir hata oluştu. Lütfen değerleri kontrol edip yeniden deneyiniz.
+      manage_rooms_recordings: Bu role sahip kullanıcıların oyun odalarını ve kayıtları yönetmesine izin ver
+      name: Rol ismi
+      new_role: "Yeni bir rol oluştur "
+      role_has_users: "Bu rol %{user_count} hesabına atanmıştır. silmeden önce lütfen tüm hesapları kaldırınız."
+      title: Roller
+      promote_email: Bu rol atandığında kullanıcılara bir e-posta gönder
+      demote_email: Bu rolden kaldırıldıklarında kullanıcılara bir e-posta gönder
+      edit_site_settings: Bu roldeki kullanıcıların site ayarlarını düzenlemesine izin ver
+      edit_roles: Bu roldeki kullanıcıların site ayarlarını düzenlemesine izin ver
+      manage_users: Bu roldeki kullanıcıların kullanıcıları yönetmesine izin ver
+      invalid_assignment: Kullanıcıya rolün atanmasında hata oluştu. Lütfen değerleri kontrol edip yeniden deneyiniz. 
       colour:
-        title: Yetki Gruplarının Rengi
-        info: Yetkilerle ilişkilendirilecek rengi ayarlayın
+        title: Rol rengi
+        info: Rolle ilişkilendirilecek rengi ayarlama
     rooms:
-      title: Sanal Sınıflar
+      title: Sunucu Odaları
       table:
-        id: "Sanal Kimlik No:"
+        id: Kimlik bilgisi
         not_running: Çalışmıyor
-        running: Çalışmıyor
+        running: Çalışıyor
         status: Durum
-        view: Görünüş
-    title: Sistem Ayarları
+        view: Görünüm
+    title: Organizasyon ayarları
     users:
       invite: Kullanıcıyı davet et
       edit:
-        title: Kullanıcı Ayrıntılarını Düzenle
+        title: Kullanıcıyı davet et
       settings:
-        approve: Onaylamak
-        decline: Kısıtlama
-        ban: Engelli Üye
+        approve: Onayla
+        decline: Reddet
+        ban: Kullanıcıyı yasakla
         delete: Sil
         edit: Düzenle
-        edit_roles: Üye yetkisini düzenle
-        perm_delete: Kalıcı olarak silmek
-        unban: Kullanıcının Yasağını Kaldır
-        undelete: Geri Al
+        edit_roles: Kullanıcı rollerini düzenleyin
+        perm_delete: Kalıcı olarak sil
+        unban: Kullanıcı Yasağını Kaldır
+        undelete: Geri al
       table:
-        authenticator: Şifrematik
+        authenticator: Kimlik denetleyicisi
         created: Düzenlendi
         name: İsim
         not_found: Aramanızla eşleşen kullanıcı yok
         no_users: Kullanıcı bulunamadı
-        role: Yetkisi
-        uid: Kullancı No
-        username: Kullanıcı Adı
-      title: Kullanıcıları Yönetin
-  add_to_google_calendar: "Google Takvim Ekleme"
-  bigbluebutton: Sanal Okulumuz
-  bigbluebutton_exception: Hata! Toplantı başlatılırken bir hata oluştu!
+        role: Rol
+        uid: Kullanıcı kimliği
+        username: Kullanıcı adı
+      title: Kullanıcıları Yönet
+  add_to_google_calendar: "Kullanıcıları Yönet"
+  bigbluebutton: PAT3
+  pat3_exception: Hata! Oyuna başlarken bir hata oluştu!
   cancel: İptal
   cookies:
-    cookie_info: "Çerezler hizmetlerimizi sunmamıza yardımcı olur. Hizmetlerimizi kullanarak, çerezleri kullanmamızı kabul edersiniz."
-    cookie_button: Kabul Ediyorum
-  copied: Kopyalandı
-  copy: Kopyala
+    cookie_info: Çerezler hizmetlerimizi sunmamıza yardım etmektedir. Hizmetleri kullanırken çerezlerin kullanılmasını kabul etmektesiniz.
+    cookie_button: Katılıyorum
+  copied: Kopyalanan
+  copy: Kopya
   date:
     month_names: [~, Ocak, Şubat, Mart, Nisan, Mayıs, Haziran, Temmuz, Ağustos, Eylül, Ekim, Kasım, Aralık]
-  default_admin: "Bu hesap için hala varsayılan şifreyi kullanıyorsunuz. Değiştirmek için lütfen<a href=\"%{edit_link}\">burayı</a> tıklayın."
+  default_admin: "Bu hesap halen  için varsayılan şifreyi kullanıyorsunuz. Değiştirmek için lütfen <a href=\"%{edit_link}\">burayı</a> tıklayınız."
   delete: Sil
-  delivery_error: E-posta teslimi sırasında bir hata oluştu. Lütfen bir yöneticiye başvurun!
-  docs: Belgeler
-  email: E-Posta
-  email_sent: "%{email_type} e-postanız gönderildi! (Eğer almadıysanız lütfen Spam klasörünüzü kontrol edin)"
-  enter_your_name: İsminizi girin!
+  delivery_error: E-Posta gönderilirken bir hata oluştu. Lütfen sistem yöneticisi ile iletişime geçiniz!
+  docs: Dokümantasyon
+  email: E-posta
+  email_sent: "E postanız %{email_type} gönderildi! (Eğer e-posta alınmadıysa lütfen spam kutusunu kontrol etmelerini isteyiniz)"
+  enter_your_name: Adınızı giriniz!
   errors:
-    bigbluebutton:
-      help: "Lütfen uygun adımların atıldığından emin olun.<a href=\"%{doc_link}\">Daha fazla bilgi için...</a>"
-      message: Geçersiz Sanal Okul Bitiş Noktası ve Gizli
-      title: Server Hatası
+    pat3:
+      help: "Lütfen doğru adımların yürütüldüğünden emin olun <a href=\"%{doc_link}\">Daha fazla</a>"
+      message: Geçersiz PAT3 bitiş noktası ve gizli
+      title: Sunucu hatası
     internal:
-      message: Sonunda bir şeyler ters gitti görülüyor.
-      help: "Hata günlüğe kaydedildi, bir göz atalım!"
-      report: Sorunu Bildir
+      message: Bir şeyler ters gitti gibi görünüyor.
+      help: "Hata kaydedildi, bir göz atacağız!"
+      report: Rapor bildir
     maintenance:
-      message: "Üzgünüz, bakım aşamasındayız."
-      help: Yakında döneceğiz!
+      message: "Üzgünüz, bakım için kapalıyız."
+      help: Yakında döneceğim!
     migration_error:
-      contact_admin: "Yönetici değilseniz, lütfen bir tane ile iletişime geçin."
-      continue: 1.0 sürümü kullanmaya devam etmek istiyorum.
+      contact_admin: "Yönetici değilseniz, lütfen bir tanesine başvurun."
+      continue: 1.0 kullanarak kalmak istiyorum.
       notice: >
-        Sistem bir veritabanı taşıma hatasıyla karşılaştı.<br>Bunun nedeni Greenlight 2.0 sürümünü kullanmadığınızdan olabilir. 2.0 sürümüne nasıl yükselteceğimi göster!
-      upgrade: "2,0 Sürümüne nasıl yükselteceğimi göster!"
-      version: "Greenlight'ın yeni bir sürümünü çıkardık, ancak veritabanınız uyumlu değil."
+        PAT3 veri tabanı aktarımı hatası verdi.<br> PAT3 güncelleme yapmadığınız için gerçekleşmiş olabilir
+      upgrade: 2.0'a nasıl yükselteceğimi göster!
+      version: "PAT3'ün yeni bir versiyonunu yayınladık, ancak veritabanınız uyumlu değil."
     messages:
-      blank: Boş bırakılamaz
-      too_short: Çok kısa
-      invalid: Geçersiz
-      taken: Daha önce alındı
-      accepted: kabul edilmeli
-      confirmation: "%{attribute} ile eşleşmiyor"
-      inclusion: listeye dahil değil
+      blank: boş olamaz
+      too_short: çok kısa
+      invalid: geçersizdir
+      taken: daha önce alındı
+      accepted: kabul edildi
+      confirmation: "eşleşmiyor% {Özelliği}"
+      inclusion: Listeye dahil edilmedi
     no_provider:
       message: Erişmeye çalıştığınız site etkin değil
-      help: Greenlight'ı kurmak için lütfen sistem yöneticinize başvurun
+      help: Lütfen PAT3'ü kurmak için sistem yöneticinize başvurun.
     not_found:
-      message: Üzgünüz! Aradığınız sayfa mevcut değil.
-      help: "Kaldırılması mümkün mü?"
+      message: Üzgünüm! Aradığınız sayfa mevcut değil.
+      help: "Kaldırılmış olması mümkün mü?"
       user_not_found:
         help: Lütfen bir yöneticiye başvurun.
         message: "Üzgünüz, bu kullanıcı kayıtlı değil."
       user_missing:
-        help: Lütfen Linki doğrulayın ve tekrar deneyin
-        message: Girdiğiniz Link geçerli değil.
+        help: Lütfen URL’yi doğrulayın ve tekrar deneyin
+        message: Girdiğiniz URL geçerli değil.
     title: Hatalar
     unauthorized:
       message: Bu uygulamaya erişiminiz yok
@@ -223,182 +210,182 @@ tr:
   expired_reset_token: Şifre sıfırlama bağlantısının süresi doldu!
   features:
     title: Özellikler
-    rooms: Kişiselleştirilmiş Sınıflar
+    rooms: Kişiselleştirilmiş Odalar
     recordings: Kayıt Yönetimi
-    designs: Özel Tasarımlar
-    authentication: Kullanıcı Kimlik Doğrulaması
+    designs: Özel tasarımlar
+    authentication: Kullanıcı doğrulama
   footer:
-    powered_by: "%{href} tarafından desteklenmektedir."
+    powered_by: "Powered by %{href}."
   forgot_password:
-    subtitle: Şifremi Unuttum
-    email: E-Posta
-    submit: Konu
-  go_back: Geri Git
-  greenlight: Sanal Sınıf
+    subtitle: Parolanızı mı unuttunuz
+    email: E-mail
+    submit: Gönder
+  go_back: Geri dön
+  greenlight: PAT3
   header:
     all_recordings: Tüm Kayıtlar
     dropdown:
-      account_settings: Sistem
+      account_settings: organizasyon
       help: "Yardıma mı ihtiyacınız var?"
-      home: Ana Sayfa
-      settings: Profil
-      signout: Kayıt Ol
-  home_room: Ana Sınıf
-  info_update_success: Bilgiler başarıyla güncellendi.
-  invalid_credentials: Girdiğiniz e-posta ve şifre kayıtlarımızla eşleşmedi. Tekrar deneyin veya şifrenizi sıfırlamak için Şifremi Unuttum'u tıklayın.
-  invalid_login_method: Hesap uyuşmazlığı nedeniyle giriş başarısız oldu. Kimlik doğrulama sistemi ile giriş yapmanız gerekiyor.
-  invite_message: "Birini toplantıya davet etmek için bu bağlantıyı gönderin:"
+      home: Ana 
+      settings: profil
+      signout: Oturumu Kapat
+  home_room: Ana Oyun Odası
+  info_update_success: Bilgi başarıyla güncellendi.
+  invalid_credentials: "Girdiğiniz e-posta ve şifre kayıtlarımızla eşleşmedi. Parolanızı sıfırlamak için tekrar deneyin veya Parolanızı mı unuttunuz?"
+  invalid_login_method: Hesap uyumsuzluğu nedeniyle giriş yapılamadı. OmniAuth ile giriş yapmalısınız
+  invite_message: "Birisini oyuna davet etmek için onlara şu bağlantıyı gönderin:"
   javascript:
     room:
       mailer:
-        subject: 'Bir kaydı görüntülemeye davetlisiniz'
-        body: 'Kaydı görüntülemek için aşağıdaki bağlantıyı izleyin:'
-        autogenerated: 'Bu e-posta Sanal Okul tarafından otomatik olarak oluşturulur.'
-        footer: 'Sanal Okul açık kaynaklı bir web konferans sistemidir. Sabal Okul hakkında daha fazla bilgi için bkz. https://bigbluebutton.org/.'
+        subject: 'sizi bir kaydı izlemeye davet etti'
+        body: 'Kaydı görüntülemek için aşağıdaki bağlantıyı takip edin:'
+        autogenerated: 'Bu e-posta PAT3 tarafından otomatik olarak oluşturulmuştur.'
+        footer: 'Pat3 Oyun Severlere Özel Dünyanın İlk Görüntülü Oyun Platformudur,'
     search:
-      start: Aramaya başla ...
+      start: Armaya başla
   landing:
-    about: "%{href}, Sanal Okul açık kaynaklı web konferans sunucunuz için basit bir kullanıcı arabirimidir. Oturumları düzenlemek için kendi sınıflarınız oluşturabilir veya kısa ve rahat bir bağlantı kullanarak diğer sınıflara katılabilirsiniz."
-    welcome: Sanal Okulumuza hoş geldiniz.
-    video: Sistemi kullanma ile ilgili eğitici videomuzu izleyebilirsiniz.
-    upgrade: Bana 2.0 sürümüne nasıl yükseltileceğini göster!
-    version: "Sanal Sınıf Sisteminin yeni bir sürümünü çıkardık, ancak veritabanınız uyumlu değil."
-  language_default: Varsayılan (programın orjinal dili)
-  ldap_error: LDAP sunucusuna bağlanılamıyor. Lütfen env dosyasındaki LDAP yapılandırmanızı kontrol edin ve sunucunuzun çalıştığından emin olun.
-  login: Oturum Aç
-  login_title: Hesabınızda oturum açın
+    about: "%{href} Oyun Severlere Özel Dünyanın İlk Görüntülü Oyun Platformudur,"
+    welcome: PAT3.com'a hoş geldiniz.
+    video: PAT3'ü kullanma hakkındaki eğitimimizi izleyin
+    upgrade: 2.0'a nasıl yükselteceğimi göster!
+    version: "PAT3'ün yeni bir versiyonunu yayınladık, ancak veritabanınız uyumlu değil."
+  language_default: Varsayılan (tarayıcı dili)
+  ldap_error: LDAP sunucusuna bağlanılamadı. Lütfen env dosyasındaki LDAP konfigürasyonunuzu kontrol ediniz ve sunucunuzun çalıştığından emin olunuz
+  login: oturum aç
+  login_title: hesabınıza giriş yapın
   mailer:
     user:
       approve:
         info: Hesabınız onaylandı.
-        signin: Kişisel sınıflarınıza erişmek için aşağıdaki butonu tıklayın ve oturum açın.
-        signin_link: Oturum Aç
+        signin: Kişisel oyun odalarınıza erişmek için aşağıdaki butona tıklayın ve giriş yapın.
+        signin_link: Oturum aç
         signup:
-          info: Sanal Sınıfı kullanmak için yeni bir kullanıcı kaydoldu.
-          more-info: Bu kullanıcının Sanal Sınıfa erişmesine izin vermek için hesabını kuruluş ayarlarında onaylamanız gerekir.
-          admins_link: Sistem Sayfasını ziyaret edin
-          subject: Yeni Sanal Sınıf Kullanıcı Kaydı
-          username: "Kullanıcı %{name} adıyla ve %{email} e-postası ile kaydoldu."
+          info: PAT3'ü kullanmak için yeni bir kullanıcı kayıt oldu.
+          more-info: Kullanıcıların PAT3'e a ulaşabilmeleri için organizasyon ayarlarında kullanıcının hesabını onaylamalısınız
+          admins_link: Organizasyon Sayfasını Ziyaret Edin
+          subject: Yeni PAT3 Kullanıcısı Kayıt Ol
+          username: "Kullanıcı %{name} ismi ve %{email} e-posta adresi ile oturum açtı"
         subject: Hesap Onaylandı
         username: "Kullanıcı adınız %{email}."
       demoted:
-        info: "Artık %{url} üzerinde %{rol} değilsiniz."
-        more-info: Artık normal bir kullanıcıyla aynı yetkiye sahipsiniz.
-        root_link: Oturum Aç
-        subtitle: "%{role} Yetkiniz İptal Edildi"
+        info: "%{url}bağlantısındaki %{role}rolünde değilsiniz"
+        more-info: Artık normal bir kullanıcıyla aynı ayrıcalıklara sahipsiniz.
+        root_link: Oturum aç
+        subtitle: "%{role}Hakları geçersiz kılındı"
       invite:
-        info: "%{name} tarafından kendi kişisel alanınıza davet edildiniz"
+        info: "Kişisel alanınıza %{name} tarafından davet edildiniz."
         signup_info: E-postanızı kullanarak kaydolmak için aşağıdaki butona tıklayın ve adımları izleyin.
-        signup_link: Kayıt Ol
+        signup_link: Kaydol
         signup:
-          info: Davet edilen bir kullanıcı Sanal Sınıfı kullanmak için kaydoldu.
-          admins_link: Sistem sayfasını ziyaret edin
-          subject: Yeni Sanal Sınıf Kullanıcı Kaydı
-          username: "Kullanıcı %{name} adıyla ve %{email} e-postası ile kaydoldu."
-        subject: Sanal Okul'a davet
-        username: "Kullanıcı adınız %{email}."
+          info: Davet edilen bir kullanıcı PAT3'ü kullanmak için kaydoldu.
+          admins_link: Organizasyon Sayfasını Ziyaret Edin
+          subject: Yeni PAT3 Kullanıcısı Kayıt Ol
+          username: "Kullanıcı %{name} ismi ve %{email} e-posta adresi ile oturum açtı"
+        subject: PAT3'e katılma davetiyesi
+        username: "Kullanıcı adınız%{email}"
       password_reset:
-        title: 'Şifre sıfırlama'
-        welcome: "<b>%{email}</b> e-postası için bir şifre sıfırlaması istendi."
-        message: 'Bu sıfırlamayı talep ettiyseniz, lütfen şifrenizi sıfırlamak için aşağıdaki bağlantıyı tıklayın:'
-        reset_link: Şifreyi Sıfırla
-        expire: Bu bağlantının süresi iki saat içinde dolacak.
-        ignore: "Bu isteği siz yapmadıysanız, bu e-postayı güvenle yok sayabilirsiniz."
+        title: 'Parola sıfırlama'
+        welcome: " <b>%{email}</b>e-posta adresi için parola sıfırlaması istenildi"
+        message: 'Bu sıfırlamayı talep ettiyseniz, şifrenizi sıfırlamak için lütfen aşağıdaki bağlantıyı tıklayın:'
+        reset_link: Şifreyi yenile
+        expire: Bu bağlantı iki saat içinde sona erecek.
+        ignore: "Bu isteği yapmadıysanız, bu e-postayı güvenle yok sayabilirsiniz."
       promoted:
-        admins_link: Sistem Ayar Sayfasını Ziyaret Edin
-        info: "Artık %{url} üzerinde bir %{role} oldunuz."
-        more-info: "Yeni yetkilerinizi görüntülemek için lütfen %{url} adresini ziyaret edin."
-        subtitle: "%{role} Yetkisi Verildi"
+        admins_link: Organizasyon Sayfasını Ziyaret Edin
+        info: "%{url}bağlantısındaki%{role}rolündesiniz"
+        more-info: "Yeni haklarınızı görmek için  %{url} yi ziyaret ediniz"
+        subtitle: "%{role} Hakları verildi"
       verify_email:
-        welcome: "Sayın %{name} , kişisel alanınıza hoş geldiniz!"
-        success: "%{bigbluebutton} özelliğinden yararlanarak, oturumlara yöneticilik yapmak ve diğerleriyle işbirliği yapmak için kendi sınıflarınızı oluşturabilirsiniz."
-        username: "Kullanıcı adınız %{email}."
-        verify: Hesabınızı doğrulamak için aşağıdaki butona tıklamanız yeterlidir.
-        verify_text: 'Hesabınızı doğrulamak için şu bağlantıyı izlemeniz yeterlidir: %{url}'
+        welcome: " %{name}kişisel alanına hoş geldin!"
+        success: " %{bigbluebutton}kullanarak başkanlarıyla görüşmek için kendi oyun odalarınızı oluşturabilir ve birlikte çalışabilirsiniz"
+        username: "Kullanıcı adını% {Email}"
+        verify: Hesabınızı doğrulamak için aşağıdaki butona tıklamanız yeterli.
+        verify_text: 'Hesabınızı doğrulamak için %{url}linkine tıklayınız'
         verify_link: Hesabı Doğrula
-        thanks: Katıldığınız için teşekkürler ve iyi günler!
+        thanks: Katıldığınız için teşekkür ederiz ve iyi günler!
   maintenance:
-    window_alert: "%{date}tarihi için bakım çalışması planlandı"
+    window_alert: " %{date} için bakım penceresi takvimlendi"
   max_concurrent: İzin verilen maksimum eşzamanlı oturum sayısına ulaşıldı!
-  merged: Birleştirilmiş
+  merged: Birleştirildi
   modal:
     create_role:
-      create: Yeni bir Yetki Grubu oluştur
-      footer_text: Oluşturduktan sonra bu rol için ayrı ayrı izinleri düzenleyebilirsiniz
-      name_placeholder: Bir Yetki adı girin ...
-      not_blank: Yetki adı boş bırakılamaz.
-      title: Yeni Yetki Oluştur
+      create: Yeni Bir Rol Oluştur
+      footer_text: Bu rolün bireysel izinlerini oluşturduktan sonra düzenleyebilirsiniz.
+      name_placeholder: Bir rol adı girin ...
+      not_blank: Rol adı boş bırakılamaz.
+      title: Yeni Rol Oluştur
     create_room:
       access_code: Giriş kodu
-      access_code_placeholder: İsteğe bağlı bir sınıfa erişim kodu oluşturun
-      auto_join: Sınıfa girişimi otomatik olarak yap
-      create: Sınıf Oluştur
-      free_delete: Bu sınıfı istediğiniz zaman silebilirsiniz.
-      name_placeholder: Bir sınıf adı girin ...
-      not_blank: Sınıf adı boş bırakılamaz.
-      title: Yeni Sınıf Oluştur
+      access_code_placeholder: İsteğe bağlı oyun odası erişim kodu oluşturun
+      auto_join: Otomatik olarak oyun odasına katıl
+      create: Oyun odası yarat
+      free_delete: Bu oyun odasını istediğiniz zaman silmekte özgür olacaksınız.
+      name_placeholder: Bir oyun odası adı girin ...
+      not_blank: Oyun oda adı boş bırakılamaz.
+      title: Yeni oyun odası oluştur
     delete_account:
-      confirm: "Bu hesabı silmek istediğinizden emin misiniz?"
-      delete: "Eminim, bu hesabı silin."
-      keep: "Kesinlikle , ben saklayacağım."
-      delete_warning: "Bu, kullanıcının hesabını devre dışı bırakır. Devre dışı bırakılan tüm kullanıcılar silinen sekmenin altında bulunabilir."
-      warning: Bu karar kesindir. İlişkili verileri <b>kurtaramazsınız</b>.
+      confirm: "Bu hesabı silmek istediğinize emin misiniz?"
+      delete: Eminim bu hesabı sil.
+      keep: Aslında bunu saklayacağım.
+      delete_warning: Bu işlem kullanıcının hesabını etkinsizleştirir. Tüm etkinsizleştirilmiş kullanıcılar silinmiş sekmesi altında bulunabilir.
+      warning: Bu son karardır. İlgili verileri <b>asla </b> geri kurtaramayacaksınız.
     delete_room:
-      confirm: "%{room} dosyasını silmek istediğinizden emin misiniz?"
-      delete: "Eminim, bu sınıfı sil."
-      keep: "İkinci düşüncede, ben saklayacağım."
-      warning: "Bu sınıfı <b> kurtaramayacaksınız</b> "
-      recording_warning: "veya %{recordings_num} ile  kayıtlarından biri birleştirildi."
+      confirm: " %{room} oyun odasını silmek istediğinizden emin misiniz?"
+      delete: "Eminim, bu oyun odasını silin."
+      keep: "İkinci kez düşününce, tutmaya karar verdim."
+      warning: Bu oyun odasını <b>asla</b> geri alamazsınız
+      recording_warning: "veya %{recordings_num} kaydı ile ilişkili kayıtların tümü"
     invite_user:
-      email_placeholder: Kullanıcıların e-postalarını girin (virgülle ayırarak)
-      footer: Kullanıcıya nasıl kaydolacağıyla ilgili talimatları içeren bir e-posta alacak
-      send: Davet Gönder
-      title: Kullanıcıyı Davet Et
+      email_placeholder: Kullanıcıların e-postalarını girin (virgülle ayrılmış)
+      footer: Kullanıcı nasıl giriş yapacağına ilişkin bir e-posta alacak
+      send: Davetiye gönder
+      title: Kullanıcıyı davet et
     login:
       or: veya
-      with: "%{provider} ile oturum açın"
-      forgot_password: "Şifreni mi Unuttun ?"
+      with: " %{provider} ile giriş yap"
+      forgot_password: "Parolanızı mı unuttunuz?"
     rename_recording:
     remove_shared:
-      title: "Bu Sınıfı, sınıf listenizden kaldırmak istediğinizden emin misiniz?"
-      delete: "Eminim, bu sınıfı kaldır."
-      warning: Bu sınıfa artık <b>erişemeyeceksiniz</b>.
+      title: "Bu oyun odasını oda listenizden kaldırmak istediğinize emin misiniz?"
+      delete: "Eminim, oyun odasını sil."
+      warning: Bu oyun odasına <b>asla</b> tekrar ulaşamayacaksınız
     room_settings:
-      title: Sınıf Ayarları
-      update: Güncelleme Sınıfı
-      client: İstemci türünü seçin
+      title: Oyun odası ayarları
+      update: Oyun Odası Güncelleme
+      client: Kullanıcı türünü seçin
       join_moderator: Tüm kullanıcılar moderatör olarak katılır
-      mute: Kullanıcıları katıldıklarında sessize al
+      mute: Katıldıklarında kullanıcıları sustur
       require_approval: Katılmadan önce moderatör onayı iste
-      start: Kullanıcılardan herhangi birini bu toplantıyı başlatmasına izin ver
-      footer_text: Sınıfınızın ayarları her zaman yapılabilir.
+      start: Herhangi bir kullanıcının bu oyunu başlatmasına izin ver
+      footer_text: Oyun odanızın ayarlarını herhangi bir zamanda yapabilrisiniz
     rename_room:
-      name_placeholder: Yeni bir sınıf adı girin ...
+      name_placeholder: Yeni bir oyun odası adı girin ...
     share_access:
-      footer: "Bir sınıfı bir kullanıcıyla paylaşmak, sınıfı başlatmalarına ve sınıfın kayıtlarını görüntülemelerine olanak tanır"
-      list: Paylaşımla Bağlantılı
-      title: Sınıf Erişimini Paylaş
-      save: Değişikliği Kaydet
-      cancel_changes: Değişikliği İptal Et
-      select: Kullanıcı Seç
+      footer: "Bir kullanıcı ile oyun odasını paylaşmak, oyun odasını başlatabilmelerine ve oyun odasının kayıtlarını görüntüleyebilmelerine izin verir"
+      list: ile paylaşılan
+      title: Oyun odasının ulaşımı paylaş
+      save: Değişiklikleri kaydet
+      cancel_changes: Değişikliklerden vazgeç
+      select: Kullanıcıyı seç
     merge_user:
-      cancel: İptal Et
-      from: Birleştirilecek Hesap
-      title: Kullanıcı Hesaplarını Birleştir
-      to: Ana Hesap
+      cancel: Vazgeç
+      from: Birleştirilecek hesap
+      title: Kullanıcı hesaplarını birleştir
+      to: birincil hesap
       save: Birleştir
-      footer: "Birleştirilecek hesabın sınıfları, Birincil Hesabın sınıf listesine aktarılacak ve daha sonra hesap silinecektir."
-  name_update_success: Sınıf ismi başarı ile değiştirildi!
+      footer: Oyun odasında birleştirilecek olan hesaplar Birincil Hesabın oyun odası listesi üzerinden transfer edilecek ve daha sonra hesap silinecektir.
+  name_update_success: Oyun odası adı başarıyla değiştirildi!
   no_user_email_exists: Belirtilen e-postaya sahip mevcut bir kullanıcı yok. Lütfen doğru yazdığınızdan emin olun.
-  omniauth_error: Kimlik doğrulma sisemi ile  kimlik doğrulaması yapılırken bir hata oluştu. Lütfen tekrar deneyin veya bir yöneticiye başvurun!
-  omniauth_specific_error: "Kimlik doğrulama sistemi ile kimlik doğrulaması yapılırken %{error} oluştu. Lütfen tekrar deneyin veya bir yöneticiye başvurun!"
+  omniauth_error: OmniAuth doğrulanırken bir hata oluştu. Lütfen sistem yöneticisi ile iletişime geçiniz!
+  omniauth_specific_error: "%{error} OmniAuth doğrulanırken bir hata oluştu. Lütfen sistem yöneticisi ile iletişime geçiniz!"
   pagy:
     nav:
       prev: "&lsaquo; Önceki"
       next: "Sonraki &rsaquo;"
       gap: "&hellip;"
   password: Şifre
-  password_empty_notice: Şifre boş bırakılamaz.
+  password_empty_notice: Şifre boş olamaz.
   password_reset_success: Şifre sıfırlandı.
   password_different_notice: Parola Onayı eşleşmiyor.
   provider:
@@ -408,16 +395,16 @@ tr:
     ldap: LDAP
   recaptcha:
     errors:
-      recaptcha_unreachable: Hata! Gerçek kişi yanıtınızı doğrulayamadık. Lütfen tekrar deneyin.
-      verification_failed: "Gerçek kişi doğrulaması başarısız oldu, lütfen deneyin"
+      recaptcha_unreachable: "Üzgünüz,  reCAPTCHA cevabınızı doğrulayamadık. Lütfen yeniden deneyiniz."
+      verification_failed: "reCAPTCHA vdoğrulaması yapılamadı, lütfen yeniden deneyiniz."
   recording:
     all_recordings: Tüm Kayıtlar
-    email: E-posta Kaydediliyor
-    error: " kayıt alınırken %{count} hatası oluştu"
-    no_recordings: "Bu sınıfta %{inject} kayıt yok."
+    email: E-posta Kaydı
+    error: " %{count} kayıt(lar)ı okunurken bir hata oluştu"
+    no_recordings: "Bu oyun odasında %{inject}kaydı bulunmamaktadır."
     no_user_recordings: Şu anda hiç kaydınız yok.
-    no_matched_recordings: "Aramanızla eşleşen %{inject} kayıt yok."
-    recorded_on: "%{date} tarihinde kaydedildi"
+    no_matched_recordings: "Aramanızla eşleşen %{inject} kaydı bulunamadı"
+    recorded_on: " %{date}üzerine kaydedildi"
     table:
       name: İsim
       thumbnails: Küçük resimler
@@ -426,131 +413,131 @@ tr:
       visibility: Görünürlük
       formats: Biçimleri
     visibility:
-      public: Halka açık
+      public: açık
       unlisted: Liste dışı
     format:
       notes: Notlar
-      podcast: Dijital ses dosyası
+      podcast: Podcast
       presentation: Sunum
-      statistics: İstatistik
+      statistics: İstatistikler
       video: Video
   registration:
     approval:
-      fail: Hesabınız henüz onaylanmadı. Kaydolduğunuzdan bu yana birden fazla gün geçtiyse lütfen yöneticinize başvurun.
-      signup: Hesabınız başarılı bir şekilde oluşturulmuştur. Onay için bir yöneticiye gönderildi.
+      fail: Kullanıcı hesabını henüz onaylanmadı. Kayıt olduktan sonra bir kaç gün geçmiş ise lütfen sistem yöneticiniz ile iletişime geçiniz.
+      signup: Hesabınız başarıyla oluşturuldu. Sistem yöneticisi  onayı bekleniyor.
     banned:
-      fail: "Bu uygulamaya erişiminiz yok. Bunun bir hata olduğunu düşünüyorsanız, lütfen yöneticinize başvurun." 
+      fail: "Bu uygulamaya giriş izniniz bulunmamaktadır. Bunun bir hata olduğunu düşünüyorsanız, lütfen sistem yöneticinize başvurun." 
     deprecated:
-      new_signin: Hesabınız için yeni bir giriş yöntemi seçin. Eski hesabınızdaki tüm sınıflarınız yeni hesaba taşınacak
-      twitter_signin: "Twitter üzerinden oturum açma onaylanmadı ve bir sonraki sürümde kaldırılacak. Hesabınızı yeni bir kimlik doğrulama yöntemine taşımak için <a href=\"%{link}\"> buraya </a> tıklayın"
-      twitter_signup: Twitter üzerinden kayıt reddedildi. Lütfen farklı bir kayıt yöntemi kullanın
-      merge_success: Twitter hesabınızı yeni hesabınızla başarıyla birleştirdi. Eski twitter hesabınız silindi
+      new_signin: "Hesabınıza giriş için yeni bir yöntem seçin. Eski hesabınıza ait tüm oyun odaları yeni hesabınıza aktarılacaktır. "
+      twitter_signin: "Twitter aracılığıyla girişler yeni sürümde kaldırılacaktır. Yeni hesap doğrulama yöntemi için  <a href=\"%{link}\"> buraya </a> tıklayınız."
+      twitter_signup: Twitter aracılığıyla girişler yeni sürümde kaldırılmıştır. Yeni bir giriş yöntemi deneyiniz.
+      merge_success: "Yeni Twitter hesabınızla eşleşme başarılı oldu. Eski Twitter hesabınız silindi. "
     invite:
-      fail: "Simgeniz geçersiz veya süresi dolmuş. Bunun bir hata olduğunu düşünüyorsanız, lütfen yöneticinize başvurun."
-      no_invite: Katılmak için bir davetiyeniz yok. Lütfen bir davet almak için yöneticinize başvurun.
-  remove: Kaldırmak
-  rename: Adını değiştirmek
+      fail: "Token geçersiz veya tarihi geçmiş. Bunun bir hata olduğunu düşünüyorsanız, lütfen sistem yöneticinize başvurun."
+      no_invite: "Katılmak için davetiyeniz bulunmamaktadır. Bunun bir hata olduğunu düşünüyorsanız, lütfen sistem yöneticinize başvurun."
+  remove: Kaldır
+  rename: İsmi değiştir
   reset_password:
     subtitle: Şifreyi yenile
     password: Yeni Şifre
-    confirm: Yeni şifre onayı
-    update: Şifre Güncelle
-    auth_change: Kimlik doğrulama yöntemi değişti. Şifrenizi ayarlamak için lütfen e-postanızı kontrol edin.
+    confirm: Yeni parola onayı
+    update: Şifre güncelle
+    auth_change: Doğrulama yöntemi değişti. Parolanızı oluşturmak için e-postanızı kontrol edin.
   roles:
     active: Aktif
     admin: Yönetici
-    banned: Engellendi
+    banned: Yasaklı
     deleted: Silindi
     pending: Beklemede
     user: Kullanıcı
   room:
-    access_code_required: Lütfen Sınıfa katılmak için geçerli bir erişim kodu girin
-    create_room: Sınıf Oluşturun
-    create_room_error: Sınıf oluşturulurken bir hata oluştu
-    create_room_success: Sınıf başarıyla oluşturuldu
+    access_code_required: Lütfen oyun odasına katılmak için geçerli bir erişim kodu girin
+    create_room: Oyun Odası Oluştur
+    create_room_error: Oyun odası oluşturulurken bir hata oluştu
+    create_room_success: Oyun odası başarıyla oluşturuldu
     delete:
-      home_room: Kullanıcının Ana Sınıfı silinemiyor
-      success: Sınıf başarıyla silindi
-      fail: "Sınıf silinemedi (%{error})"
-    enter_the_access_code: Sınıfın erişim kodunu girin
-    invalid_provider: Geçersiz bir Link girdiniz. Lütfen Linki kontrol edip tekrar deneyin.
-    invited: Katılıma davet edildin
+      home_room: Kullanıcının ana oyun odası silinemiyor
+      success: Oyun odası başarıyla silindi
+      fail: "(%{error}) oyun odası silinemedi"
+    enter_the_access_code: Oyun odasının erişim kodunu girin
+    invalid_provider: Geçersiz bir URL girdiniz. Lütfen URL’yi kontrol edip tekrar deneyin.
+    invited: Katılmaya davet edildiniz
     invite_participants: Katılımcıları Davet Et
     join: Katıl
-    last_session: "%{session} üzerindeki son oturum"
-    login: Giriş
-    owner: Sahibi
-    owner_banned: Bu sınıf şu anda kullanılamıyor
+    last_session: "%{session} da son oturum"
+    login: Gir
+    owner: Oyun sahibi
+    owner_banned: bu oyun odası şu anda uygun değil
     no_room:
-      description: Katılmak istediğiniz sınıfın sınıf Linkini veya sınıf kimliğini girin.
-      edit_profile: Kullanıcı Profili düzenle
-      go_to: Sınıfa Git
-      invalid_room_uid: Girdiğiniz Sınıf Linki / kullanıcı kimliği geçersizdi.
-      placeholder: Sınıf Linki / kullanıcı kimliği
-      no_recent_rooms: Yeni katıldığınız sınıf yok
-      recent_rooms: En Son Katılınan Sınıfa Git
-      title: Sınıfa Katılın
-    no_sessions: Bu sınıfta henüz oturum yok!
-    recordings: Sınıf Kayıtları
-    room_limit: İzin verilen maksimum sınıf mevcuduna ulaştınız
-    room_limit_exceeded: "İzin verilen sınıf sayısını aştınız. Bu sınıfa erişmek için lütfen %{difference} sınıf(lar)ı silin."
+      description: Katılmak istediğiniz oyun odasının adını veya URL sini giriniz
+      edit_profile: Kullanıcı Profilini Düzenle
+      go_to: Oyun odasına git
+      invalid_room_uid: Girdiğiniz oyun odası url'si / kullanıcı kimliği geçersizdi.
+      placeholder: Oyun odası URL'si / kullanıcı kimliği
+      no_recent_rooms: Yakın zamanda katıldığınız odanız yok
+      recent_rooms: Yeni Katılan Bir oyun odasına Git
+      title: Bir Oyun Odasına Katılın
+    no_sessions: Bu oyun odasında henüz bir oturum yok!
+    recordings: Oyun odası kayıtları
+    room_limit: İzin verilen maksimum oyun odası sayısına ulaştınız
+    room_limit_exceeded: "İzin verilen maksimum oyun odası sayısını aştınız. Bu odaya(lara) girebilmek için  %{difference} lütfen siliniz"
     sessions: Oturumlar
-    settings: Sınıf Ayarları
-    share: Erişimi Yönet
+    settings: Oyun odası ayarları
+    share: Girişi Yönet
     shared_by: "%{email} tarafından paylaşıldı"
-    remove_shared_access_success: "Paylaşılan sınıf, sınıf listenizden başarıyla kaldırıldı"
-    remove_shared_access_error: Paylaşılan sınıf listenizden kaldırılırken bir hata oluştu
-    shared_access_success: Sınıf başarıyla paylaşıldı
-    shared_access_error: Sınıf paylaşılırken bir hata oluştu
-    start: Başlat
-    unavailable: "Bu sınıf, yetkilisinin e-postası doğrulanmadığı için şu anda kullanılamıyor."
-    update_settings_error: Sınıf ayarları güncellenirken bir hata oluştu
-    update_settings_success: Sınıf ayarları başarıyla güncellendi
+    remove_shared_access_success: Paylaşılan oyun odasını listenizden başarıyla silindi
+    remove_shared_access_error: Paylaşılan oyun odasını listenizden silinirken bir hata oluştu
+    shared_access_success: Oyun odasıbaşarıyla paylaşıldı
+    shared_access_error: Oyun odası paylaşılırken bir hata oluştu
+    start: Başla
+    unavailable: Oyun odasu sahibinin e-postası doğrulanamadığından bu oyun odası şimdilik kapalıdır
+    update_settings_error: Oyun oda ayarları güncellenirken bir hata oluştu
+    update_settings_success: Oyun oda ayarları başarıyla güncellendi
     wait:
-      message: Ders henüz başlamadı.
-      auto: Ders başladığında otomatik olarak katılacaksınız.
+      message: Oyun henüz başlamadı.
+      auto: Oyun başladığında otomatik olarak katılacaksınız.
   settings:
     account:
       fullname: Ad Soyad
       language: Dil
       provider: Sağlayıcı
-      image: Resim
-      image_url: Profil Resmi Linki
-      roles: Kullanıcı Yetkisi
-      subtitle: Hesap Bilgilerinizi güncelleyin
+      image: Görüntü
+      image_url: Profil Resmi URL'si
+      roles: Kullanıcı rolleri
+      subtitle: Hesap Bilgilerinizi Güncelleyin
       title: Hesap bilgisi
     delete:
       button: "Evet, hesabımı silmek istiyorum."
-      disclaimer: "Eğer hesabınızı silmeyi seçerseniz, hesabınız <b>KURTARILAMAZ</b> olacaktır. Ayarlar, sınıflar ve kayıt dahil olmak üzere hesabınızla ilgili tüm bilgiler kaldırılacaktır."
-      subtitle: Hesabınızı Kalıcı Olarak Silin
+      disclaimer: "Hesabınızı silerseniz <b>asla</b> geri alamazsınız. Hesabınıza ilişkin tüm bilgiler, ayarlar, oyun odaları ve kayıtlar silinecektir."
+      subtitle: Hesabı Kalıcı Olarak Sil
       title: Hesabı sil
     password:
-      confirmation: Yeni şifre onayı
+      confirmation: Yeni parola onayı
       new: Yeni Şifre
       old: Eski Şifre
-      subtitle: Şifreni Değiştir
+      subtitle: Şifreni değiştir
       title: Şifre
-    title: Profil
-    search: Arama
+    title: profil
+    search: Ara
   signup:
     password_confirm: Şifre onayı
-    subtitle: Bir Hesap Oluştur
-    title: Kayıt Ol
-    with: " %{provider} ile kaydolun"
+    subtitle: Hesap oluştur
+    title: Hesap oluştur
+    with: " %{provider} ile giriş yap"
   terms:
-    accept: "%{href} kabul ediyorum"
-    accept_existing: Şartları ve koşulları kabul ediyorum
-    title: Şartlar ve Koşullar
+    accept: "%{href} i kabul ediyorum"
+    accept_existing: Şartları ve Koşulları Kabul Ediyorum
+    title: Şartlar ve koşullar
   test_install: >
-    Bu dağıtım önceden yapılandırılmış bir test sunucusu kullanıyor, bunu kendi sunucunuzla değiştirmeniz gerekir. Ayrıntılar için %{href} sayfasına bakın.
-  update: Güncelleme
+    Bu dağıtım önceden konfigüre edilmiş bir test sunucusu kullanmaktadır, bunu kendi sunucunuzla değiştirmelisiniz. Detaylar için , bakınız %{href}.
+  update: Güncelleştirme
   verify:
     accept: Doğrulayın
     activated: Hesap doğrulandı!
-    already_verified: Hesap daha önce doğrulandı
-    invalid: Geçersiz doğrulama linki
+    already_verified: Hesap zaten doğrulandı
+    invalid: Geçersiz doğrulama bağlantısı
     not_verified: Hesabınız henüz doğrulanmadı.
     resend: Doğrulama e-postasını tekrar gönder
-    signin: Hesabınıza erişmek için lütfen oturum açın.
+    signin: Lütfen hesabınıza erişmek için giriş yapın.
     title: Eposta adresinizi doğrulayın
     verification: Doğrulama

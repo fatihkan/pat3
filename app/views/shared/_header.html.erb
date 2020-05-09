@@ -12,20 +12,13 @@
 # You should have received a copy of the GNU Lesser General Public License along
 # with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 %>
-
+ <% if current_user %>
 <div class="header py-4">
   <div class="container">
     <div class="d-flex">
-      <%= link_to (current_user ? home_page : root_path), class: "header-brand" do %>
-        <% begin %>
-          <%= image_tag(logo_image, class: "header-brand-img", alt:"") %>
-        <% rescue %>
-          <%= t("administrator.site_settings.branding.invalid") %>
-        <% end %>
-      <% end %>
 
       <div class="d-flex ml-auto">
-        <% if current_user %>
+       
 
           <% if current_user.has_role? :super_admin %>
             <% admins_page = params[:controller] == "admins" && params[:action] == "index" ? "active" : "" %>
@@ -81,34 +74,15 @@
                 <% end %>
               <% end %>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="http://docs.bigbluebutton.org/install/greenlight-v2.html" target="_blank" rel="noopener">
-                <i class="dropdown-icon far fa-question-circle"></i> <%= t("header.dropdown.help") %>
-              </a>
-              <% if Rails.configuration.report_issue_url.present? %>
-                <a class="dropdown-item" href="<%= Rails.configuration.report_issue_url %>" target="_blank" rel="noopener">
-                  <i class="dropdown-icon fas fa-exclamation mr-3"></i><%= t("errors.internal.report") %>
-                </a>
-              <% end %>
               <%= link_to logout_path, class: "dropdown-item" do %>
                 <i class="dropdown-icon fas fa-sign-out-alt"></i> <%= t("header.dropdown.signout") %>
               <% end %>
             </div>
           </div>
-        <% else %>
-          <% allow_greenlight_accounts = allow_greenlight_accounts? %>
-          <% if allow_greenlight_accounts %>
-            <%= link_to t("login"), signin_path, :class => "btn btn-outline-primary mx-2 sign-in-button" %>
-          <% elsif Rails.configuration.loadbalanced_configuration %>
-            <%= link_to t("login"), omniauth_login_url(:bn_launcher), :class => "btn btn-outline-primary mx-2 sign-in-button" %>
-          <% else %>
-            <%= link_to t("login"), signin_path, :class => "btn btn-outline-primary mx-2 sign-in-button" %>
-          <% end %>
-
-          <% if allow_user_signup? && allow_greenlight_accounts %>
-            <%= link_to t("signup.title"), signup_path, :class => "btn btn-outline-primary mx-2 sign-in-button" %>
-          <% end %>
-        <% end %>
+        
       </div>
     </div>
   </div>
 </div>
+<% else %>
+<% end %>
